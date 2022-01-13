@@ -1,0 +1,53 @@
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  min-height: 400px;
+  padding: 1%;
+  box-shadow: 0 1px 3px #505050;
+  background-color: var(--color-sec-op);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: bold;
+  min-width: 150px;
+  max-width: 50%;
+  margin: 0 5% 15px 5%;
+  margin: 30px auto auto auto;
+  text-align: center;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.textInput {
+  z-index: 0;
+  position: relative;
+  min-height: 5vh;
+  width: 80%;
+  background-color: var(--color-sec-op);
+  border: 2px solid #505050;
+  border-radius: 20px;
+  margin: 5px auto;
+  padding: 0 10px;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: var(--color-primary);
+  }
+}
+
+.submitBtn {
+  min-height: 5vh;
+  max-width: 50%;
+  min-width: 150px;
+  font-size: 1.5rem;
+  border: 2px solid #505050;
+  border-radius: 20px;
+  margin: auto auto 15px auto;
+}

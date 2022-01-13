@@ -1,0 +1,95 @@
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    right: 50px;
+  }
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+.container {
+  &.loaded {
+    animation: slideIn 0.3s ease-in-out both;
+  }
+  //opacity: 0;
+  z-index: 0;
+  position: relative;
+  background-color: #0e0e0e;
+  box-shadow: 0 1px 3px #505050;
+  margin: 5px;
+  height: 40vh;
+  flex-grow: 1;
+  color: #eeeeee;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(14, 14, 14, 1) 0%,
+      rgba(14, 14, 14, 0) 15%,
+      rgba(14, 14, 14, 0) 85%,
+      rgba(14, 14, 14, 1) 100%
+    );
+    z-index: 0;
+  }
+  & p {
+    opacity: 0;
+  }
+  &:hover {
+    &::before {
+      background: linear-gradient(
+        180deg,
+        rgba(14, 14, 14, 1) 0%,
+        rgba(14, 14, 14, 0) 25%,
+        rgba(14, 14, 14, 0) 75%,
+        rgba(14, 14, 14, 1) 100%
+      );
+    }
+    & p {
+      opacity: 1;
+    }
+  }
+}
+
+.title {
+  transition: all 0.2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  width: 90%;
+  margin: 5px 7px;
+}
+
+.description {
+  transition: all 0.2s;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 90%;
+  margin: 10px 7px;
+}
+
+.img {
+  z-index: 1;
+  height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.author {
+  transition: all 0.2s;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 90%;
+  margin: 5px 7px;
+  text-align: end;
+  align-self: flex-end;
+}
